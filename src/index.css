@@ -1,0 +1,98 @@
+body {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.dark-mode {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.dark-mode .card {
+  background-color: #343a40;
+  border-color: #495057;
+}
+
+.dark-mode .form-control {
+  background-color: #343a40;
+  border-color: #495057;
+  color: #f8f9fa;
+}
+
+.dark-mode .navbar {
+  background-color: #343a40 !important;
+  color: #f8f9fa;
+}
+
+.dark-mode .navbar-brand {
+  color: #f8f9fa;
+}
+
+.dark-mode .btn-outline-secondary {
+  color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.dark-mode .btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.dark-mode .card-title {
+  color: #f8f9fa;
+}
+
+/* Full height styles */
+html, body, #root {
+  height: 100%;
+}
+
+.app-container {
+  min-height: calc(100vh - 56px); /* Subtract navbar height */
+  padding: 1rem;
+}
+
+.editor-container {
+  height: calc(100vh - 120px); /* Adjust for navbar and padding */
+}
+
+/* Line numbers styles */
+.line-numbers {
+  counter-reset: line;
+  padding-left: 3.5rem !important;
+  line-height: 1.5;
+  position: relative;
+}
+
+.line-numbers::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .line-numbers::before {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.line-content {
+  display: block;
+  padding-left: 1rem;
+  white-space: pre;
+}
+
+.line-content::before {
+  counter-increment: line;
+  content: counter(line);
+  position: absolute;
+  left: 0;
+  width: 3rem;
+  text-align: center;
+  color: #6c757d;
+}
